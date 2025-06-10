@@ -1,3 +1,8 @@
+## Data files
+waveform-inversion
+.python-version
+
+## Temp files
 __pycache__/
 .DS_Store
 
