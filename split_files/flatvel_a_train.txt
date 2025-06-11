@@ -1,2 +1,1 @@
 data/train_samples/FlatVel_A/data/data1.npy	data/train_samples/FlatVel_A/model/model1.npy
-data/train_samples/FlatVel_A/data/data2.npy	data/train_samples/FlatVel_A/model/model2.npy

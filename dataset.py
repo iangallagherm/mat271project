@@ -55,12 +55,14 @@ class FWIDataset(Dataset):
 
     # Load from one line
     def load_every(self, batch):
-        batch = batch.split('\t')
+        batch = batch.strip().split('\t')
         data_path = batch[0] if len(batch) > 1 else batch[0][:-1]
         data = np.load(data_path)[:, :, ::self.sample_ratio, :]
         data = data.astype('float32')
         if len(batch) > 1:
-            label_path = batch[1][:-1]    
+            # Got rid of [:-1] since readlines() already strips the newline character
+            # Not sure why it needed to be there before, but they could have had carriage returns
+            label_path = batch[1] 
             label = np.load(label_path)
             label = label.astype('float32')
         else:

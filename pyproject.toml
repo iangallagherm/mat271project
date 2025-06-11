@@ -23,9 +23,9 @@ dependencies = [
     "scikit-learn>=1.7.0",
     "scipy==1.15.3",
     "six==1.17.0",
+    "tensorboard>=2.19.0",
     "torch>=2.7.1",
     "torchvision>=0.22.1",
-    "transforms>=0.2.1",
     "tzdata==2025.2",
     "utils>=1.0.2",
 ]
