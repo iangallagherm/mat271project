@@ -82,59 +82,6 @@ wheels = [
 ]
 
 [[package]]
-name = "fwi-ha"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "contourpy" },
-    { name = "cycler" },
-    { name = "fonttools" },
-    { name = "kiwisolver" },
-    { name = "matplotlib" },
-    { name = "numpy" },
-    { name = "packaging" },
-    { name = "pandas" },
-    { name = "pillow" },
-    { name = "pyparsing" },
-    { name = "python-dateutil" },
-    { name = "pytz" },
-    { name = "pywavelets" },
-    { name = "scikit-learn" },
-    { name = "scipy" },
-    { name = "six" },
-    { name = "torch", version = "2.7.1", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
-    { name = "torch", version = "2.7.1+cu118", source = { registry = "https://download.pytorch.org/whl/cu118" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
-    { name = "torchvision", version = "0.22.1", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
-    { name = "torchvision", version = "0.22.1+cu118", source = { registry = "https://download.pytorch.org/whl/cu118" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
-    { name = "tzdata" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "contourpy", specifier = "==1.3.2" },
-    { name = "cycler", specifier = "==0.12.1" },
-    { name = "fonttools", specifier = "==4.58.0" },
-    { name = "kiwisolver", specifier = "==1.4.8" },
-    { name = "matplotlib", specifier = "==3.10.3" },
-    { name = "numpy", specifier = "==2.2.6" },
-    { name = "packaging", specifier = "==25.0" },
-    { name = "pandas", specifier = "==2.2.3" },
-    { name = "pillow", specifier = "==11.2.1" },
-    { name = "pyparsing", specifier = "==3.2.3" },
-    { name = "python-dateutil", specifier = "==2.9.0.post0" },
-    { name = "pytz", specifier = "==2025.2" },
-    { name = "pywavelets", specifier = "==1.8.0" },
-    { name = "scikit-learn", specifier = ">=1.7.0" },
-    { name = "scipy", specifier = "==1.15.3" },
-    { name = "six", specifier = "==1.17.0" },
-    { name = "torch", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=2.7.1" },
-    { name = "torch", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=2.7.1", index = "https://download.pytorch.org/whl/cu118" },
-    { name = "torchvision", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=0.22.1" },
-    { name = "torchvision", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=0.22.1", index = "https://download.pytorch.org/whl/cu118" },
-    { name = "tzdata", specifier = "==2025.2" },
-]
-
-[[package]]
 name = "jinja2"
 version = "3.1.6"
 source = { registry = "https://pypi.org/simple" }
@@ -220,6 +167,67 @@ wheels = [
 ]
 
 [[package]]
+name = "mat271-fwi"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "contourpy" },
+    { name = "cycler" },
+    { name = "fonttools" },
+    { name = "kiwisolver" },
+    { name = "matplotlib" },
+    { name = "network" },
+    { name = "numpy" },
+    { name = "packaging" },
+    { name = "pandas" },
+    { name = "pillow" },
+    { name = "pyparsing" },
+    { name = "python-dateutil" },
+    { name = "pytorch-wavelets" },
+    { name = "pytz" },
+    { name = "pywavelets" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+    { name = "six" },
+    { name = "torch", version = "2.7.1", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+    { name = "torch", version = "2.7.1+cu118", source = { registry = "https://download.pytorch.org/whl/cu118" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+    { name = "torchvision", version = "0.22.1", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+    { name = "torchvision", version = "0.22.1+cu118", source = { registry = "https://download.pytorch.org/whl/cu118" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+    { name = "transforms" },
+    { name = "tzdata" },
+    { name = "utils" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "contourpy", specifier = "==1.3.2" },
+    { name = "cycler", specifier = "==0.12.1" },
+    { name = "fonttools", specifier = "==4.58.0" },
+    { name = "kiwisolver", specifier = "==1.4.8" },
+    { name = "matplotlib", specifier = "==3.10.3" },
+    { name = "network", specifier = ">=0.1" },
+    { name = "numpy", specifier = "==2.2.6" },
+    { name = "packaging", specifier = "==25.0" },
+    { name = "pandas", specifier = "==2.2.3" },
+    { name = "pillow", specifier = "==11.2.1" },
+    { name = "pyparsing", specifier = "==3.2.3" },
+    { name = "python-dateutil", specifier = "==2.9.0.post0" },
+    { name = "pytorch-wavelets", specifier = ">=1.3.0" },
+    { name = "pytz", specifier = "==2025.2" },
+    { name = "pywavelets", specifier = "==1.8.0" },
+    { name = "scikit-learn", specifier = ">=1.7.0" },
+    { name = "scipy", specifier = "==1.15.3" },
+    { name = "six", specifier = "==1.17.0" },
+    { name = "torch", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=2.7.1" },
+    { name = "torch", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=2.7.1", index = "https://download.pytorch.org/whl/cu118" },
+    { name = "torchvision", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=0.22.1" },
+    { name = "torchvision", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=0.22.1", index = "https://download.pytorch.org/whl/cu118" },
+    { name = "transforms", specifier = ">=0.2.1" },
+    { name = "tzdata", specifier = "==2025.2" },
+    { name = "utils", specifier = ">=1.0.2" },
+]
+
+[[package]]
 name = "matplotlib"
 version = "3.10.3"
 source = { registry = "https://pypi.org/simple" }
@@ -258,6 +266,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/e0/47/dd32fa426cc721143
 wheels = [
     { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198, upload-time = "2023-03-07T16:47:09.197Z" },
 ]
+
+[[package]]
+name = "network"
+version = "0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cb/72/0769291af36fb6020d000337ee219456ea779c03cf3124831e901f12ed13/network-0.1.tar.gz", hash = "sha256:786b171895c3ecaaf05948c29e206ab99285f328f799c3bbc5e22a2805bfc27f", size = 2765, upload-time = "2017-02-28T23:37:45.558Z" }
 
 [[package]]
 name = "networkx"
@@ -487,6 +501,21 @@ wheels = [
 ]
 
 [[package]]
+name = "pytorch-wavelets"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "six" },
+    { name = "torch", version = "2.7.1", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+    { name = "torch", version = "2.7.1+cu118", source = { registry = "https://download.pytorch.org/whl/cu118" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3f/e3/1553046e97926b859edcab05d74b5b7543327c92b37c58919a3e49ff6151/pytorch_wavelets-1.3.0.tar.gz", hash = "sha256:8b5c63f87c2bb36e6b342a7bb294926bda5cd974614fb4848deab6ec2792f56f", size = 1029927, upload-time = "2023-04-13T06:26:52.086Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/65/b7da80705dc679999ef77c06ded71e060d4ea14ed80111c104223e130cc1/pytorch_wavelets-1.3.0-py3-none-any.whl", hash = "sha256:e4f8635872370d8de640ef7548edef4ef60d5c565553c463210e939c7901ee69", size = 54879, upload-time = "2023-04-13T06:26:45.63Z" },
+]
+
+[[package]]
 name = "pytz"
 version = "2025.2"
 source = { registry = "https://pypi.org/simple" }
@@ -703,6 +732,15 @@ wheels = [
 ]
 
 [[package]]
+name = "transforms"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/a4/dcc6a3c5292fae5d8a0aadaaa73b3d9eb0cef141ef8426da10a0f57f0c2f/transforms-0.2.1.tar.gz", hash = "sha256:da1076d7762337b2c654db3e45dd1a7fb53794df7610a8b19a63e994cec43964", size = 19107, upload-time = "2023-11-08T14:38:43.577Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/15/9b1a41ba648851defa77180fbe6c1278bae7a164a90df81ccdfa7103a4e7/transforms-0.2.1-py3-none-any.whl", hash = "sha256:2159892daec3d62d894bc575a64612509b7d1733418eb04bc58812257dcd3b2e", size = 18927, upload-time = "2023-11-08T14:38:42.331Z" },
+]
+
+[[package]]
 name = "triton"
 version = "3.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -731,3 +769,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/95/32/1a225d6164441be76
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/23/c7abc0ca0a1526a0774eca151daeb8de62ec457e77262b66b359c3c7679e/tzdata-2025.2-py2.py3-none-any.whl", hash = "sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8", size = 347839, upload-time = "2025-03-23T13:54:41.845Z" },
 ]
+
+[[package]]
+name = "utils"
+version = "1.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/1f/c196d21c2df061923154aecf24cab049a114394956e90c9bfbfdd398e27a/utils-1.0.2.tar.gz", hash = "sha256:f4d5157e27e9d434006b5b52a1ec951a34e53e7ecaa145d43a153ec452eb5d9e", size = 13203, upload-time = "2024-01-06T07:11:25.75Z" }
