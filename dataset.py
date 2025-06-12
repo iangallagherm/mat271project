@@ -55,7 +55,7 @@ class FWIDataset(Dataset):
 
     # Load from one line
     def load_every(self, batch):
-        batch = batch.strip().split('\t')
+        batch = batch.strip().split()
         data_path = batch[0] if len(batch) > 1 else batch[0][:-1]
         data = np.load(data_path)[:, :, ::self.sample_ratio, :]
         data = data.astype('float32')

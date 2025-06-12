@@ -169,7 +169,7 @@ def main(args):
 
     if args.resume:
         print(args.resume)
-        checkpoint = torch.load(args.resume, map_location='cpu')
+        checkpoint = torch.load(args.resume, map_location='cpu', weights_only=False)
         model.load_state_dict(network.replace_legacy(checkpoint['model']))
         print('Loaded model checkpoint at Epoch {} / Step {}.'.format(checkpoint['epoch'], checkpoint['step']))
     

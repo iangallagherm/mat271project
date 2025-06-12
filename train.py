@@ -221,24 +221,27 @@ def main(args):
     """
     
     def criterion(pred, gt):
-    # --- your old terms ---
+        # --- your old terms ---
         loss_g1v = l1loss(pred, gt)
         loss_g2v = l2loss(pred, gt)
 
-    # --- new wavelet-domain term ---
-    # pred, gt assumed shape (B, C, H, W) or (B, 1, traces, samples)
-        Yl_pred, Yh_pred = dwt(pred)   # Yl_pred: low-pass coeffs; Yh_pred: list of detail coeffs
-        Yl_gt,   Yh_gt   = dwt(gt)
+        if args.lambda_wave == 0:
+            loss_wave = 0
+        else:
+        # --- new wavelet-domain term ---
+        # pred, gt assumed shape (B, C, H, W) or (B, 1, traces, samples)
+            Yl_pred, Yh_pred = dwt(pred)   # Yl_pred: low-pass coeffs; Yh_pred: list of detail coeffs
+            Yl_gt,   Yh_gt   = dwt(gt)
 
-    # start with coarse (approximation) L2 loss
-        loss_wave = l2loss(Yl_pred, Yl_gt)
+        # start with coarse (approximation) L2 loss
+            loss_wave = l2loss(Yl_pred, Yl_gt)
 
-    # add detail losses at each level
-    # Yh_pred, Yh_gt are lists of length J; each entry is Tensor of shape (B, C, H/2^j, W/2^j, 3)
-        for subband_pred, subband_gt in zip(Yh_pred, Yh_gt):
-            loss_wave += l2loss(subband_pred, subband_gt)
+        # add detail losses at each level
+        # Yh_pred, Yh_gt are lists of length J; each entry is Tensor of shape (B, C, H/2^j, W/2^j, 3)
+            for subband_pred, subband_gt in zip(Yh_pred, Yh_gt):
+                loss_wave += l2loss(subband_pred, subband_gt)
 
-    # --- combine everything ---
+        # --- combine everything ---
         loss = args.lambda_g1v * loss_g1v \
          + args.lambda_g2v * loss_g2v \
          + args.lambda_wave  * loss_wave
