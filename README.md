@@ -43,6 +43,17 @@ A list of available software that we can use and modify as a part of deep learni
 ### Inversion Net
 Some commands for running inversionnet with the modified wavelet regularization
 
+Start a training run:
 ```jsx
-uv run train.py -ds flatvel-a -n wavelet_test_3 -m InversionNet -g1v 1 -g2v 0 -wave 0.005  --tensorboard -t flatvel_a_train.txt -v flatvel_a_val.txt --lr 0.0001 -b 256 -eb 40 -nb 5 -j 16 -d cuda
+uv run train.py -ds flatvel-a -n wavelet_test_XXX -m InversionNet -g1v 1 -g2v 0 -wave 0.005 --tensorboard -t flatvel_a_train.txt -v flatvel_a_val.txt --lr 0.0001 -b 256 -eb 40 -nb 5 -j 16 -d cuda
+```
+
+Resume a training run:
+```jsx
+uv run train.py -ds flatvel-a -n wavelet_test_XXX -r CHECKPOINT.PTH -m InversionNet -g1v 1 -g2v 0 -wave 0.005 --tensorboard -t flatvel_a_train.txt -v flatvel_a_val.txt --lr 0.0001 -b 256 -eb 40 -nb 5 -j 16 -d cuda
+```
+
+Testing:
+```jsx
+uv run test.py -ds flatvel-a -n wavelet_test_XXX -m InversionNet -v flatvel_a_val.txt -r CHECKPOINT.PTH --vis -vb 2 -vsa 3
 ```
