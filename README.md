@@ -57,3 +57,17 @@ Testing:
 ```jsx
 uv run test.py -ds flatvel-a -n wavelet_test_XXX -m InversionNet -v flatvel_a_val.txt -r CHECKPOINT.PTH --vis -vb 2 -vsa 3
 ```
+
+Scratch commands:
+
+```jsx
+uv run train.py -ds flatfault-a -n wavelet_test_ffa_1 -m InversionNet -g1v 0 -g2v 1 -wave 0.005 --tensorboard -t flatfault_a_train.txt -v flatfault_a_val.txt --lr 0.0001 -b 64 -eb 40 -nb 5 -j 12 -d cuda
+```
+
+```jsx
+uv run train.py -ds flatfault-a -n wavelet_test_ffa_1 -r checkpoint.pth -m InversionNet -g1v 0 -g2v 1 -wave 0.005 --tensorboard -t flatfault_a_train.txt -v flatfault_a_val.txt --lr 0.0001 -b 64 -eb 40 -nb 5 -j 12 -d cuda
+```
+
+```
+uv run train.py -ds curvevel-a -n wavelet_test_cva -r checkpoint.pth -m InversionNet -g1v 0 -g2v 1 -wave 0.005 --tensorboard -t curvevel_a_train.txt -v curvevel_a_val.txt --lr 0.0001 -b 32 -eb 10 -nb 5 -j 12 -d cuda
+```

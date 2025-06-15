@@ -156,7 +156,7 @@ def main(args):
     if args.train_anno[-3:] == 'txt':
         dataset_train = FWIDataset(
             args.train_anno,
-            preload=False,
+            preload=True,
             sample_ratio=args.sample_temporal,
             file_size=ctx['file_size'],
             transform_data=transform_data,
@@ -169,7 +169,7 @@ def main(args):
     if args.val_anno[-3:] == 'txt':
         dataset_valid = FWIDataset(
             args.val_anno,
-            preload=False,
+            preload=True,
             sample_ratio=args.sample_temporal,
             file_size=ctx['file_size'],
             transform_data=transform_data,
@@ -266,7 +266,7 @@ def main(args):
         model_without_ddp = model.module
 
     if args.resume:
-        checkpoint = torch.load(args.resume, map_location='cpu')
+        checkpoint = torch.load(args.resume, map_location='cpu', weights_only=False)
         model_without_ddp.load_state_dict(network.replace_legacy(checkpoint['model']))
         optimizer.load_state_dict(checkpoint['optimizer'])
         lr_scheduler.load_state_dict(checkpoint['lr_scheduler'])
