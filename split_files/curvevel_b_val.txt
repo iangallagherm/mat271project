@@ -1,12 +1,2 @@
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data49.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model49.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data50.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model50.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data51.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model51.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data52.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model52.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data53.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model53.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data54.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model54.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data55.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model55.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data56.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model56.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data57.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model57.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data58.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model58.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data59.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model59.npy
-/mnt/e/Ian-FWI-Data/CurveVel_B/data/data60.npy	/mnt/e/Ian-FWI-Data/CurveVel_B/model/model60.npy
+/Volumes/T9/Ian-FWI-Data/CurveVel_B/data/data49.npy	/Volumes/T9/Ian-FWI-Data/CurveVel_B/model/model49.npy
+/Volumes/T9/Ian-FWI-Data/CurveVel_B/data/data50.npy	/Volumes/T9/Ian-FWI-Data/CurveVel_B/model/model50.npy
